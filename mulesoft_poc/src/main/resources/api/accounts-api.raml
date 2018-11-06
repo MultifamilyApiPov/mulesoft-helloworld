@@ -1,0 +1,18 @@
+#%RAML 1.0
+title: Accounts API
+version: 1.0.0
+baseUri: http://localhost:9002/accounts
+mediaType: [ application/json ]
+
+uses: 
+  AccountsType: DataTypes/AccountDataTypes.raml
+  
+/getAccounts:
+  get:
+    responses: 
+      200:
+        body: 
+          type: AccountsType.Accounts
+      500: 
+        body:
+          type: AccountsType.error
