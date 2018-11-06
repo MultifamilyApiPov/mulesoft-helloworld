@@ -1,0 +1,56 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Get SF Accounts",
+    "version": "1.0.0"
+  },
+  "x-basePath": "",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/Accounts": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "description": "Account Name",
+                  "example": "Lender Name",
+                  "type": "string"
+                },
+                "Type": {
+                  "description": "Account Type",
+                  "example": "Entity",
+                  "type": "string"
+                },
+                "LenderIdentifier": {
+                  "format": "int",
+                  "description": "Lender Identifier",
+                  "example": 1234,
+                  "type": "number"
+                }
+              },
+              "required": [
+                "Name",
+                "Type",
+                "LenderIdentifier"
+              ]
+            }
+          }
+        },
+        "operationId": "GET_Accounts"
+      }
+    }
+  }
+}

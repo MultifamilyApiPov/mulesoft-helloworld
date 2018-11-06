@@ -2,3 +2,5 @@
 Simple application to test out mulesoft environment setup.
 test message - Sandeep
 
+Testing GIT integration.
+
