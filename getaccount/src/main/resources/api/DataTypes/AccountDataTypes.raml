@@ -1,0 +1,28 @@
+#%RAML 1.0 Library
+usage: Defines Account API structures
+
+types: 
+  Account:
+    properties: 
+      Name:
+        type: string
+        example: "Test Account"
+      Type:
+        type: string
+        example: "Example Type"
+      LenderId:
+        type: string
+        example: "lender1"
+  Accounts:
+    type: array
+    items: Account
+
+  error:
+    properties: 
+      message:
+        type: string
+        example: "Invalid session"
+      code: 
+        type: number
+        example: 500
+      
